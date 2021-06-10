@@ -70,14 +70,14 @@ module wishbone_if (
                 16: begin
                     if (wstrb[0]) decay[7:0]   <= wbs_dat_i[7:0];
                     if (wstrb[1]) decay[15:8]  <= wbs_dat_i[15:8];
-                    if (wstrb[2]) decay[17:16] <= wbs_dat_i[17:16];
+                    if (wstrb[2]) decay[23:16] <= wbs_dat_i[23:16];
                     if (wstrb[3]) decay[26:24] <= wbs_dat_i[26:24];
                     wbs_dat_o <= {5'b0, decay};
                 end
                 20: begin
                     if (wstrb[0]) fade[7:0]   <= wbs_dat_i[7:0];
                     if (wstrb[1]) fade[15:8]  <= wbs_dat_i[15:8];
-                    if (wstrb[2]) fade[17:16] <= wbs_dat_i[17:16];
+                    if (wstrb[2]) fade[23:16] <= wbs_dat_i[23:16];
                     if (wstrb[3]) fade[26:24] <= wbs_dat_i[26:24];
                     wbs_dat_o <= {5'b0, fade};
                 end
